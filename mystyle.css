@@ -1,0 +1,53 @@
+/* * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: gainsboro;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:
+    100px
+    1fr
+    400px;
+}
+
+header {
+  background-color: brown;
+  position: fixed;
+} */
+
+body {
+  color: gainsboro;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:
+    70px
+    1fr
+    0.5fr;
+  grid-template-areas:
+    "my-header my-header my-header"
+    "my-main my-main my-main"
+    "my-footer my-footer my-footer";
+}
+
+header {
+  grid-area: my-header;
+  background-color: blueviolet;
+}
+
+main {
+  grid-area: my-main;
+  background-color: burlywood;
+}
+footer {
+  grid-area: my-footer;
+  background-color: darkorchid;
+}
